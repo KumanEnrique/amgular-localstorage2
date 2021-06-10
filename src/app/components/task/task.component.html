@@ -1,0 +1,23 @@
+<div class="card mb-3">
+    <div class="card-header">
+        {{task.title}}
+        <div class="float-end">
+            <button class="btn btn-warning" (click)="deleteTask(task)">Delete</button>
+            <button class="btn btn-secondary" (click)="editTask(task)">Edit</button>
+        </div>
+    </div>
+    <div class="card-body" [hidden]="task.hide">
+        <h3>{{task.description}}</h3>
+    </div>
+    <div class="card-footer" [hidden]="task.hide">
+        <div class="mb-3">
+            <input type="text" name="title" class="form-control" [(ngModel)]="title">
+        </div>
+        <div class="mb-3">
+            <input type="text" name="description" class="form-control" [(ngModel)]="description">
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-success btn-lg" (click)="updateTask(task)">Update</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+<app-task-form (taskAdded)="addTask($event)"></app-task-form>
+
+<app-task
+class="mb-1"
+*ngFor="let task of tasks"
+[task]="task"
+></app-task>

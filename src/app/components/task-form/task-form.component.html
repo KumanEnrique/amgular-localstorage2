@@ -1,0 +1,22 @@
+<div class="row my-2">
+    <div class="col-lg-4 offset-lg-3">
+        <div class="card">
+            <div class="card-header text-center">Task Form</div>
+            <div class="card-body">
+                <form (submit)="addTask()">
+                    <div class="mb-3">
+                        <label for="" class="form-label mt-4">Task Title</label>
+                        <input type="text" name="title" class="form-control" [(ngModel)]="title">
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label mt-4">Task Description</label>
+                        <input type="text" name="description" class="form-control" [(ngModel)]="description">
+                    </div>
+                    <div class="mb-3">
+                        <button class="btn btn-primary btn-lg" >save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
